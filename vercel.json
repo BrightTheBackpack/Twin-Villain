@@ -1,0 +1,16 @@
+{
+    "builds": [
+      {
+        "src": "Build/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/Build/(.*)",
+        "headers": {
+          "Content-Encoding": "br"
+        }
+      }
+    ]
+  }
