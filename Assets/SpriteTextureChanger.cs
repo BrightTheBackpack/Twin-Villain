@@ -14,6 +14,7 @@ public class SpriteTextureChanger : MonoBehaviour
     public GameObject main;
     public GameObject hole;
     public bool dead = false;
+    public bool iswin = false;
 
     public GameObject enemy; 
     public GameObject ant;
@@ -110,6 +111,8 @@ public class SpriteTextureChanger : MonoBehaviour
         
     }
     void Collision(int x, int y){
+        Debug.Log($"{x}, {y}");
+
         Text2.SetActive(false);
         Text3.SetActive(false);
 
@@ -138,6 +141,15 @@ public class SpriteTextureChanger : MonoBehaviour
         }   
         if(teleporterPos.x == x && teleporterPos.y == y){
             if(enemyPos.x == holePos.x && enemyPos.y == holePos.y){
+                Debug.Log(enemy.GetComponent<BADSpriteTextureChanger1>().iswin);
+                if(enemy.GetComponent<BADSpriteTextureChanger1>().iswin){
+                    //win
+                    if(script.currentLevel == 0){
+                         
+                        Text2.SetActive(true);
+                         
+                        Text1.SetActive(false);
+                        }
                 //win
                 if(script.currentLevel == 0){
                      
@@ -164,7 +176,9 @@ public class SpriteTextureChanger : MonoBehaviour
                 }
 
                 main.GetComponent<genBackground>().generateGrid(script.Levels[script.currentLevel]);
-
+                    }else{
+                        iswin = true;
+                    }
             }else{
                 Debug.Log("Death");
                 Death();

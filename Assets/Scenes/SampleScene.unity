@@ -559,6 +559,7 @@ MonoBehaviour:
   main: {fileID: 1716666662}
   hole: {fileID: 1000849366}
   dead: 0
+  iswin: 0
   enemy: {fileID: 1901661255}
   ant: {fileID: 291655294}
   framess:
@@ -1447,7 +1448,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -1640,9 +1641,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0486c7aa7fa48839e4c3c5a19f36cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main: {fileID: 1716666662}
+  Text1: {fileID: 66724744}
+  Text2: {fileID: 949873545}
+  Text3: {fileID: 250927996}
   portal: {fileID: 733483303}
   player: {fileID: 690578247}
   hole: {fileID: 1000849366}
+  iswin: 0
   ant: {fileID: 291655294}
   framess:
   - {fileID: 21300000, guid: 7eb132ef3dbfb48ebaf38da21ed52121, type: 3}

@@ -27,6 +27,7 @@ public class genBackground : MonoBehaviour
         for(int x =0; x<width; x++){
             for(int y = 0; y<height; y++){
                 if(grid[x][y] == 5){
+                    Debug.Log($"GENERATED {x}, {y}");
                     Bad.transform.position = new Vector3(x,y,0);
                 }
                 if(grid[x][y] == 4){
