@@ -5,6 +5,7 @@
 		<type fullname="GrassTexture" preserve="nothing"/>
 		<type fullname="LevelManager" preserve="nothing"/>
 		<type fullname="NewTile" preserve="nothing"/>
+		<type fullname="sizeposmanager" preserve="nothing"/>
 		<type fullname="SpriteTextureChanger" preserve="nothing"/>
 		<type fullname="StartButton" preserve="nothing"/>
 		<type fullname="TeleporterAnimator" preserve="nothing"/>
