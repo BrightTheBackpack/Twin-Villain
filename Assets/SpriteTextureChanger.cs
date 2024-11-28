@@ -91,6 +91,9 @@ public class SpriteTextureChanger : MonoBehaviour
 
             main.GetComponent<genBackground>().generateGrid(script.Levels[script.currentLevel]);
         }
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            tutorial.SetActive(true);
+        }
         if(Input.GetKeyDown(KeyCode.W)){
             Collision((int)transform.position.x, (int)transform.position.y + 1);
         }
