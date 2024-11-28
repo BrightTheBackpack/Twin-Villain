@@ -6,6 +6,7 @@
 		<type fullname="LevelManager" preserve="nothing"/>
 		<type fullname="NewTile" preserve="nothing"/>
 		<type fullname="SpriteTextureChanger" preserve="nothing"/>
+		<type fullname="StartButton" preserve="nothing"/>
 		<type fullname="TeleporterAnimator" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
@@ -57,7 +58,9 @@
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 	</assembly>
 </linker>
