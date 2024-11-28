@@ -64,7 +64,7 @@ public class genBackground : MonoBehaviour
         Debug.Log("test");
         Debug.Log(script.Levels[0][0] );
 
-        generateGrid(script.Levels[level]);
+        // generateGrid(script.Levels[level]);
     }
 
     // Update is called once per frame

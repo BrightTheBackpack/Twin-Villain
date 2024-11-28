@@ -6,6 +6,7 @@ using UnityEngine;
 public class BADSpriteTextureChanger1 : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject tutorial;
     public GameObject main;
     public GameObject Text1;
     public GameObject Text2;
@@ -65,7 +66,9 @@ public class BADSpriteTextureChanger1 : MonoBehaviour
      void Collision(int x, int y){
 
         Debug.Log($"{x}, {y}");
-
+        if(tutorial.activeSelf){
+            return;
+        }
         if(player.GetComponent<SpriteTextureChanger>().dead){
             return;
         }

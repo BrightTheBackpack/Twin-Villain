@@ -7,6 +7,7 @@ using System.Linq;
 public class SpriteTextureChanger : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject tutorial;
     public GameObject Text1;
     public GameObject Text2;
     public GameObject Text3;
@@ -29,6 +30,7 @@ public class SpriteTextureChanger : MonoBehaviour
 
     }
     public void Death(){
+        
         List<List<int>> grid = new List<List<int>>
 {
     new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
@@ -117,6 +119,9 @@ public class SpriteTextureChanger : MonoBehaviour
         Text3.SetActive(false);
 
         Text1.SetActive(false);
+        if(tutorial.activeSelf){
+            return;
+        }
         if(dead){
             return;
         }
