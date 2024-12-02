@@ -182,21 +182,25 @@ public void DrawGrid()
         }
         if(sprite == 2){
             portal.transform.localScale = new Vector3((float)cellSize, cellSize, 0.5f);
+            portal.name = $"Grid_{gridX}_{gridY}";
             portal.transform.position = new Vector3(gridX , gridY, 0);
            
         }
         if(sprite == 3){
             empty.transform.localScale = new Vector3((float)cellSize, cellSize, 0.5f);
             empty.transform.position = new Vector3(gridX , gridY, -0.1f);
+            empty.name = $"Grid_{gridX}_{gridY}";
             empty.GetComponent<SpriteRenderer>().color  = Color.black;
 
         }
         if(sprite == 4){
             good.transform.localScale = new Vector3((float)cellSize, cellSize, 0.5f);
+            good.name = $"Grid_{gridX}_{gridY}";
             good.transform.position = new Vector3(gridX , gridY, 0);
         }
         if(sprite == 5){
             bad.transform.localScale = new Vector3((float)cellSize, cellSize, -0.5f);
+            bad.name = $"Grid_{gridX}_{gridY}";
             bad.transform.position = new Vector3(gridX , gridY, 0);
         }
         grid[gridXIndex][gridYIndex] = sprite;
