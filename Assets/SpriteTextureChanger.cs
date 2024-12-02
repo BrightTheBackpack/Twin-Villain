@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using TMPro;
 
 public class SpriteTextureChanger : MonoBehaviour
 {
     // Start is called before the first frame update
+    public int moves = 0;
+    public GameObject deathscreen;
+    public TMP_Text maxMoves;
+    public GameObject menu;
     public GameObject tutorial;
     public GameObject Text1;
     public GameObject Text2;
@@ -26,33 +30,24 @@ public class SpriteTextureChanger : MonoBehaviour
 
     void Start()
     {
+        script.currentLevel = PlayerPrefs.GetInt("level", 0);
+        Debug.Log(script.currentLevel);
         //  GetComponent<Renderer>().material.mainTexture = frames[0];
 
     }
     public void Death(){
+
         
-        List<List<int>> grid = new List<List<int>>
-{
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
-};
-                dead=true;
-                var allthestuff = FindObjectsOfType<GameObject>();
-                script.currentLevel = 0;
+
+        deathscreen.SetActive(true);
+        dead = true;
+
+
+    }
+    public void Restart(){
+        dead = false;
+        moves = 0;
+                        var allthestuff = FindObjectsOfType<GameObject>();
                 Debug.Log(allthestuff.Length);
                 var filtered = allthestuff.Where(obj => obj.name.Contains("Wall") || obj.name.Contains("Tile")).ToArray();
                 Debug.Log(filtered.Length);
@@ -61,8 +56,7 @@ public class SpriteTextureChanger : MonoBehaviour
                     Destroy(obj);
                 }
 
-                main.GetComponent<genBackground>().generateGrid(grid);
-
+                main.GetComponent<genBackground>().generateGrid(script.Levels[script.currentLevel]);
 
     }
     // Update is called once per frame
@@ -76,6 +70,8 @@ public class SpriteTextureChanger : MonoBehaviour
         // Update the sprite
         // spriteRenderer.sprite = Sprite.Create(currentFrame, rect, pivot);
         if(Input.GetKeyDown(KeyCode.R)){
+            moves = 0;
+            
             Debug.Log("Restart");
             dead=false;
             script = ant.GetComponent<LevelManager>();
@@ -116,6 +112,15 @@ public class SpriteTextureChanger : MonoBehaviour
         
     }
     void Collision(int x, int y){
+         script = ant.GetComponent<LevelManager>();
+        var level = script.currentLevel;
+
+        if(level == 8){
+            moves += 1;
+            if(moves > 44){
+                Death();
+            }
+        }
         Debug.Log($"{x}, {y}");
 
         Text2.SetActive(false);
@@ -128,8 +133,9 @@ public class SpriteTextureChanger : MonoBehaviour
         if(dead){
             return;
         }
-        script = ant.GetComponent<LevelManager>();
-        var level = script.currentLevel;
+        if(menu.activeSelf){
+            return;
+        }
 
         var teleporterPos = teleporter.transform.position;
         var enemyPos = enemy.transform.position;
@@ -172,6 +178,8 @@ public class SpriteTextureChanger : MonoBehaviour
                     Text2.SetActive(false);
                 }
                 Debug.Log("Win");
+                PlayerPrefs.SetInt("level", script.currentLevel + 1);
+                PlayerPrefs.Save(); 
                 script.currentLevel = script.currentLevel + 1;
                 Debug.Log(script.currentLevel);
                 var allthestuff = FindObjectsOfType<GameObject>();

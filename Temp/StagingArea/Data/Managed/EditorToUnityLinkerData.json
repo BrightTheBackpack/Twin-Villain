@@ -16,6 +16,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "cookiehandler",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
@@ -28,6 +35,8 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -37,6 +46,8 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -62,11 +73,20 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GridDrawer",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "LevelGameManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -83,6 +103,8 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -99,6 +121,8 @@
             "fullManagedTypeName": "",
             "moduleName": "AI",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -131,6 +155,13 @@
             "usedInScenes": [
                 "Assets/Scenes/SampleScene.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Scenes",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "",
@@ -236,6 +267,8 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -283,10 +316,30 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AnimationClip",
+            "fullManagedTypeName": "UnityEngine.AnimationClip",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/CutScene1.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Animator",
+            "fullManagedTypeName": "UnityEngine.Animator",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/CutScene1.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioBehaviour",
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -305,6 +358,8 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -323,6 +378,8 @@
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -332,6 +389,8 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -341,7 +400,18 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "CanvasGroup",
+            "fullManagedTypeName": "UnityEngine.CanvasGroup",
+            "moduleName": "UI",
+            "usedInScenes": [
+                "Assets/Scenes/CutScene1.unity"
             ]
         },
         {
@@ -350,6 +420,8 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -359,6 +431,8 @@
             "fullManagedTypeName": "UnityEngine.Component",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -391,6 +465,8 @@
             "fullManagedTypeName": "UnityEngine.GameObject",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -400,6 +476,8 @@
             "fullManagedTypeName": "UnityEngine.LightmapSettings",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -409,6 +487,8 @@
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -418,7 +498,18 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Motion",
+            "fullManagedTypeName": "UnityEngine.Motion",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/CutScene1.unity"
             ]
         },
         {
@@ -427,7 +518,18 @@
             "fullManagedTypeName": "UnityEngine.Object",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "PlayableDirector",
+            "fullManagedTypeName": "UnityEngine.Playables.PlayableDirector",
+            "moduleName": "Director",
+            "usedInScenes": [
+                "Assets/Scenes/CutScene1.unity"
             ]
         },
         {
@@ -443,6 +545,8 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -452,6 +556,7 @@
             "fullManagedTypeName": "UnityEngine.Renderer",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -468,6 +573,8 @@
             "fullManagedTypeName": "UnityEngine.RenderSettings",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -477,6 +584,8 @@
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -486,6 +595,8 @@
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -495,6 +606,7 @@
             "fullManagedTypeName": "UnityEngine.SpriteRenderer",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -504,6 +616,8 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -513,6 +627,8 @@
             "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -522,8 +638,52 @@
             "fullManagedTypeName": "UnityEngine.Texture2D",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.AnimationTrack",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.SignalAsset",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.SignalEmitter",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.SignalReceiver",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.SignalTrack",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.TimelineAsset",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
@@ -531,6 +691,8 @@
             "fullManagedTypeName": "UnityEngine.Transform",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/LevelBuilder.unity",
+                "Assets/Scenes/CutScene1.unity",
                 "Assets/Scenes/SampleScene.unity"
             ]
         },
@@ -559,6 +721,20 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Image",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Slider",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "volume",
             "moduleName": "",
             "usedInScenes": []
         }

@@ -7,6 +7,7 @@ public class BADSpriteTextureChanger1 : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject tutorial;
+    public GameObject menu;
     public GameObject main;
     public GameObject Text1;
     public GameObject Text2;
@@ -19,6 +20,7 @@ public class BADSpriteTextureChanger1 : MonoBehaviour
     public GameObject ant;
     private LevelManager script;
     public Sprite[] framess;
+    public GameObject thanks;
     
     public int framesPerSecond;
     public SpriteRenderer spriteRenderer;
@@ -69,6 +71,9 @@ public class BADSpriteTextureChanger1 : MonoBehaviour
         if(tutorial.activeSelf){
             return;
         }
+         if(menu.activeSelf){
+            return;
+        }
         if(player.GetComponent<SpriteTextureChanger>().dead){
             return;
         }
@@ -78,6 +83,10 @@ public class BADSpriteTextureChanger1 : MonoBehaviour
 
         if(player.transform.position.x == x && player.transform.position.y == y){
             player.GetComponent<SpriteTextureChanger>().Death();
+        }
+        if(x == portal.transform.position.x && y == portal.transform.position.y){
+                            player.GetComponent<SpriteTextureChanger>().Death();
+
         }
         script = ant.GetComponent<LevelManager>();
         // var level = script.currentLevel;
@@ -103,6 +112,9 @@ public class BADSpriteTextureChanger1 : MonoBehaviour
                     Text2.SetActive(false);
                 }
                 Debug.Log("Win");
+                PlayerPrefs.SetInt("level", script.currentLevel + 1);
+                PlayerPrefs.Save(); 
+
                 script.currentLevel = script.currentLevel + 1;
                 Debug.Log(script.currentLevel);
                 var allthestuff = FindObjectsOfType<GameObject>();
@@ -113,7 +125,10 @@ public class BADSpriteTextureChanger1 : MonoBehaviour
                 {
                     Destroy(obj);
                 }
-
+                if(script.currentLevel == 9){
+                    thanks.SetActive(true);
+                    script.currentLevel = 0;
+                }
                 main.GetComponent<genBackground>().generateGrid(script.Levels[script.currentLevel]);
 
                 }else{

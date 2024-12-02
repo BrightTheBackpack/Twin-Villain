@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class genBackground : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -21,7 +21,20 @@ public class genBackground : MonoBehaviour
     public int height;
     public GameObject BackgroundTile;
     public GameObject Wall;
+    public TMP_Text max;
+    public GameObject maxMoves;
+    public GameObject thanks;
     public void generateGrid(List<List<int>> grid){
+         script = ant.GetComponent<LevelManager>();
+        level = script.currentLevel;
+
+        if(level == 8){
+            maxMoves.SetActive(true);
+          max.text = Main.GetComponent<SpriteTextureChanger>().moves + "/44 Moves Left";
+        }
+        if(level == 9){
+            thanks.SetActive(true);
+        }
         Debug.Log(grid[1][8]);
 
         for(int x =0; x<width; x++){
@@ -62,7 +75,7 @@ public class genBackground : MonoBehaviour
         script = ant.GetComponent<LevelManager>();
         level = script.currentLevel;
         Debug.Log("test");
-        Debug.Log(script.Levels[0][0] );
+        Debug.Log(script.Levels[0][level] );
 
         // generateGrid(script.Levels[level]);
     }
@@ -70,6 +83,8 @@ public class genBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+          max.text = Main.GetComponent<SpriteTextureChanger>().moves + "/44 Moves Left";
+
       
         // GameObject Tile = Instantiate(BackgroundTile, transform.position, transform.rotation); 
         // if(Timer < Index){
